@@ -17,7 +17,7 @@ lor = st.number_input('Insert LOR')
 cgpa = st.number_input('Insert CGPA')
 research = st.radio('Choose Research', [0,1], index=None)
 
-if gre is not None and toefl is not None and ur is not None and sop is not None and lor is not None and cpga is not None and research is not None:
+if gre is not None and toefl is not None and ur is not None and sop is not None and lor is not None and cgpa is not None and research is not None:
   if st.button('Predict'):
     feature_vector = np.array([gre, toefl, ur, sop, lor, cgpa, research]).reshape(-1)
     result = str((model.predict(feature_vector))[0][0])
